@@ -7,14 +7,15 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      max-width: 900px;
-      margin: auto;
+      max-width: 800px;
+      margin: 0 auto;
       padding: 2rem;
       line-height: 1.6;
     }
     h1, h2 {
       color: #0078D4;
     }
+    a { color: #005a9e; }
     h3 {
       margin-top: 1.5em;
     }
@@ -82,7 +83,7 @@
       <li>CS61B: Data Structures</li>
       <li>CS70: Discrete Math and Probability Theory</li>
       <li>DATA C8: Foundations of Data Science</li>
-      <li>CS61A: Structure and Interpretation of Computer Programs</li>
+      <li>CS61A: The Structure and Interpretation of Computer Programs</li>
       <li>MATH54: Linear Algebra and Differential Equations</li>
     </ul>
   </section>
@@ -96,5 +97,22 @@
       <li>Gold Level in USACO (2019)</li>
     </ul>
   </section>
+
+  <!-- Include jQuery for API calls -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
+    const githubUser = 'drexler-sky';  // Change this to your actual GitHub username
+    $.ajax({
+      url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
+      dataType: 'json',
+      success: function(repos) {
+        repos.forEach(repo => {
+          $('#projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}</li>`);
+        });
+      }
+    });
+  });
+  </script>
 </body>
 </html>
