@@ -105,8 +105,9 @@
     </ul>
   </section>
 
-<script>
-$(document).ready(function() {
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+  $(document).ready(function() {
     const githubUser = 'drexler-sky'; // Replace with your actual GitHub username
     $.ajax({
         url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
@@ -127,8 +128,8 @@ $(document).ready(function() {
             $('#iceberg-projects').append('<li>Error loading Iceberg projects. Please check your network connection and repo settings.</li>');
         }
     });
-});
-</script>
+  });
+  </script>
 
 
 </body>
