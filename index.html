@@ -4,152 +4,128 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Evan H. Wu - Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f9fa;
-      color: #212529;
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
     }
-    .container {
-      max-width: 960px;
-      margin: auto;
-      padding: 20px;
+    h1, h2 {
+      color: #0078D4;
     }
-    h1, h2, h3 {
-      color: #007bff;
-    }
-    a {
-      color: #007bff;
-    }
-    a:hover {
-      text-decoration: none;
+    a { color: #005a9e; }
+    h3 {
+      margin-top: 1.5em;
     }
     ul {
-      list-style-type: none;
-      padding: 0;
+      padding-left: 20px;
     }
-    li {
-      margin-bottom: 10px;
-    }
-    .footer {
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 20px;
-      border-top: 1px solid #e0e0e0;
+    section {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Evan H. Wu</h1>
-      <p><strong>Email:</strong> evanwu@berkeley.edu &nbsp;&nbsp;&nbsp; <strong>Phone:</strong> 408-826-9907</p>
-    </header>
+  <h1>Evan H. Wu</h1>
+  <p><strong>Email:</strong> evanwu@berkeley.edu &nbsp;&nbsp;&nbsp; <strong>Phone:</strong> 408-826-9907</p>
 
-    <section>
-      <h2>Education</h2>
-      <p><strong>B.A. in Computer Science</strong> (minor: Data Science), University of California, Berkeley<br>
-      GPA: 3.733/4.0 &nbsp;&nbsp; Expected Graduation: May 2026</p>
-      <p><strong>Valley Christian High School</strong>, San Jose, CA<br>
-      Unweighted GPA: 4.0/4.0 &nbsp;&nbsp; Weighted GPA: 4.6/4.0</p>
-    </section>
+  <section>
+    <h2>Education</h2>
+    <p><strong>B.A. in Computer Science</strong> (minor: Data Science), University of California, Berkeley<br>
+    GPA: 3.733/4.0 &nbsp;&nbsp; Expected Graduation: May 2026</p>
+    <p><strong>Valley Christian High School</strong>, San Jose, CA<br>
+    Unweighted GPA: 4.0/4.0 &nbsp;&nbsp; Weighted GPA: 4.6/4.0</p>
+  </section>
 
-    <section>
-      <h2>Skills</h2>
-      <ul>
-        <li><strong>Programming Languages:</strong> Java, Python, C/C++, SQL</li>
-        <li><strong>Algorithms & Data Structures:</strong> Strong problem-solving skills, math background, basic ML concepts</li>
-        <li><strong>Architecture & Assembly:</strong> RISC-V architecture and assembly programming</li>
-        <li><strong>Tools & Platforms:</strong> SQL, bash Shell, Linux, Windows, basic .NET Framework, SharePoint, and C#</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming Languages:</strong> Java, Python, C/C++, SQL</li>
+      <li><strong>Algorithms & Data Structures:</strong> Strong problem-solving skills, math background, basic ML concepts</li>
+      <li><strong>Architecture & Assembly:</strong> RISC-V architecture and assembly programming</li>
+      <li><strong>Tools & Platforms:</strong> SQL, bash Shell, Linux, Windows, basic .NET Framework, SharePoint, and C#</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Experience</h2>
-      <p><strong>Open Source Contributor</strong>, Apache Spark and Apache Iceberg (Sept 2024 – Present)</p>
-      <p>Contributing to notable open-source distributed systems for large-scale data processing:</p>
-      <ul>
-          <li><strong>Apache Spark:</strong>
-              <ul id="spark-projects"></ul>
-          </li>
-          <li><strong>Apache Iceberg:</strong>
-              <ul id="iceberg-projects"></ul>
-          </li>
-      </ul>
-      <p><strong>CS61B (Data Structures) Tutor</strong>, UC Berkeley (May 2024 – August 2024)</p>
-      <p>Tutored students in data structures, linking theory with practice to strengthen coding and algorithmic skills.</p>
-    </section>
-
-    <section>
-      <h2>Projects</h2>
-      <ul>
-        <li><strong>CS188 ML Project:</strong> Built a PyTorch-based character-level generative model using Shakespeare’s texts.</li>
-        <li><strong>CS186 Database:</strong> Implemented a simple database in Java with B+ trees, joins, and recovery.</li>
-        <li><strong>Snek Game:</strong> Snake game in C using linked lists, pointers, and binary trees.</li>
-        <li>
-            <strong>Tetris Game:</strong> Java-based OOP Tetris with level tracking and UI separation.
-            <a href="tetris_game.html" target="_blank">View the demo of my project</a>
+  <section>
+    <h2>Experience</h2>
+    <p><strong>Open Source Contributor</strong>, Apache Spark and Apache Iceberg (Sept 2024 – Present)</p>
+    <p>Contributing to notable open-source distributed systems for large-scale data processing:</p>
+    <ul>
+        <li><strong>Apache Spark:</strong>
+            <ul id="spark-projects"></ul>
         </li>
-        <li>
-              <strong>BYOW Game:</strong> Java tile-based world explorer with algorithms and data structures.
-              <div><a href="byow.html" target="_blank">View the demo of my project</a></div>
-          </li>
-        <li><strong>Scheme Interpreter:</strong> Lisp interpreter in Python with lambda, macros, and continuations.</li>
-      </ul>
-    </section>
+        <li><strong>Apache Iceberg:</strong>
+            <ul id="iceberg-projects"></ul>
+        </li>
+    </ul>
+    <p><strong>CS61B (Data Structures) Tutor</strong>, UC Berkeley (May 2024 – August 2024)</p>
+    <p>Tutored students in data structures, linking theory with practice to strengthen coding and algorithmic skills.</p>
+  </section>
 
-    <section>
-      <h2>Relevant Coursework</h2>
-      <ul>
-        <li>CS170: Efficient Algorithms and Intractable Problems</li>
-        <li>CS186: Introduction to Database Systems</li>
-        <li>CS188: Introduction to Artificial Intelligence</li>
-        <li>EECS127: Optimization Models in Engineering</li>
-        <li>DATA C100: Principles & Techniques of Data Science</li>
-        <li>STAT134: Concepts of Probability</li>
-        <li>CS61C: Great Ideas in Computer Architecture</li>
-        <li>CS61B: Data Structures</li>
-        <li>CS70: Discrete Math and Probability Theory</li>
-        <li>DATA C8: Foundations of Data Science</li>
-        <li>CS61A: The Structure and Interpretation of Computer Programs</li>
-        <li>MATH54: Linear Algebra and Differential Equations</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Projects</h2>
+    <ul>
+      <li><strong>CS188 ML Project:</strong> Built a PyTorch-based character-level generative model using Shakespeare’s texts.</li>
+      <li><strong>CS186 Database:</strong> Implemented a simple database in Java with B+ trees, joins, and recovery.</li>
+      <li><strong>Snek Game:</strong> Snake game in C using linked lists, pointers, and binary trees.</li>
+      <li>
+          <strong>Tetris Game:</strong> Java-based OOP Tetris with level tracking and UI separation.
+          <a href="tetris_game.html" target="_blank">View the demo of my project</a>
+      </li>
+      <li>
+            <strong>BYOW Game:</strong> Java tile-based world explorer with algorithms and data structures.
+            <div><a href="byow.html" target="_blank">View the demo of my project</a></div>
+        </li>
+      <li><strong>Scheme Interpreter:</strong> Lisp interpreter in Python with lambda, macros, and continuations.</li>
+    </ul>
+  </section>
 
-    <section>
-      <h2>Awards & Honors</h2>
-      <ul>
-        <li>Member, Berkeley Chapter of Upsilon Pi Epsilon (UPE) CS Honor Society</li>
-        <li>Qualified for AIME (2020, 2021)</li>
-        <li>USAPhO Semifinalist (2019)</li>
-        <li>Gold Level in USACO (2019)</li>
-      </ul>
-    </section>
+  <section>
+    <h2>Relevant Coursework</h2>
+    <ul>
+      <li>CS170: Efficient Algorithms and Intractable Problems</li>
+      <li>CS186: Introduction to Database Systems</li>
+      <li>CS188: Introduction to Artificial Intelligence</li>
+      <li>EECS127: Optimization Models in Engineering</li>
+      <li>DATA C100: Principles & Techniques of Data Science</li>
+      <li>STAT134: Concepts of Probability</li>
+      <li>CS61C: Great Ideas in Computer Architecture</li>
+      <li>CS61B: Data Structures</li>
+      <li>CS70: Discrete Math and Probability Theory</li>
+      <li>DATA C8: Foundations of Data Science</li>
+      <li>CS61A: The Structure and Interpretation of Computer Programs</li>
+      <li>MATH54: Linear Algebra and Differential Equations</li>
+    </ul>
+  </section>
 
-    <footer class="footer">
-      © 2025 Evan H. Wu. All rights reserved.
-    </footer>
-  </div>
+  <section>
+    <h2>Awards & Honors</h2>
+    <ul>
+      <li>Member, Berkeley Chapter of Upsilon Pi Epsilon (UPE) CS Honor Society</li>
+      <li>Qualified for AIME (2020, 2021)</li>
+      <li>USAPhO Semifinalist (2019)</li>
+      <li>Gold Level in USACO (2019)</li>
+    </ul>
+  </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
   $(document).ready(function() {
     const githubUser = 'drexler-sky'; // Replace with your actual GitHub username
     $.ajax({
-        url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
+        url: https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated,
         dataType: 'json',
         success: function(repos) {
             repos.forEach(repo => {
                 if (repo.name.toLowerCase().includes('spark') ||
                     (repo.description && repo.description.toLowerCase().includes('spark'))) {
-                    $('#spark-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>`);
+                    $('#spark-projects').append(<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>);
                 } else if (repo.name.toLowerCase().includes('iceberg') ||
                     (repo.description && repo.description.toLowerCase().includes('iceberg'))) {
-                    $('#iceberg-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description or 'No description available'}</li>`);
+                    $('#iceberg-projects').append(<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>);
                 }
             });
         },
@@ -160,6 +136,7 @@
     });
   });
   </script>
+
 
 </body>
 </html>
