@@ -51,9 +51,16 @@
 
   <section>
     <h2>Experience</h2>
-    <p><strong>Open Source Contributor</strong>, Apache Spark (Sept 2024 – Present)</p>
-    <p>Contribute to Apache Spark, a distributed computing system for large-scale data processing.</p>
-
+    <p><strong>Open Source Contributor</strong>, Apache Spark and Apache Iceberg (Sept 2024 – Present)</p>
+    <p>Contributing to notable open-source distributed systems for large-scale data processing:</p>
+    <ul>
+        <li><strong>Apache Spark:</strong>
+            <ul id="spark-projects"></ul>
+        </li>
+        <li><strong>Apache Iceberg:</strong>
+            <ul id="iceberg-projects"></ul>
+        </li>
+    </ul>
     <p><strong>CS61B (Data Structures) Tutor</strong>, UC Berkeley (May 2024 – August 2024)</p>
     <p>Tutored students in data structures, linking theory with practice to strengthen coding and algorithmic skills.</p>
   </section>
@@ -98,21 +105,31 @@
     </ul>
   </section>
 
-  <!-- Include jQuery for API calls -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-  $(document).ready(function() {
-    const githubUser = 'drexler-sky';  // Change this to your actual GitHub username
+<script>
+$(document).ready(function() {
+    const githubUser = 'drexler-sky'; // Replace with your actual GitHub username
     $.ajax({
-      url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
-      dataType: 'json',
-      success: function(repos) {
-        repos.forEach(repo => {
-          $('#projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description}</li>`);
-        });
-      }
+        url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
+        dataType: 'json',
+        success: function(repos) {
+            repos.forEach(repo => {
+                if (repo.name.toLowerCase().includes('spark') ||
+                    (repo.description && repo.description.toLowerCase().includes('spark'))) {
+                    $('#spark-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>`);
+                } else if (repo.name.toLowerCase().includes('iceberg') ||
+                    (repo.description && repo.description.toLowerCase().includes('iceberg'))) {
+                    $('#iceberg-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>`);
+                }
+            });
+        },
+        error: function() {
+            $('#spark-projects').append('<li>Error loading Spark projects. Please check your network connection and repo settings.</li>');
+            $('#iceberg-projects').append('<li>Error loading Iceberg projects. Please check your network connection and repo settings.</li>');
+        }
     });
-  });
-  </script>
+});
+</script>
+
+
 </body>
 </html>
