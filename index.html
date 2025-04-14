@@ -39,7 +39,8 @@
   <img id="berkeleyTower" src="tower.png" alt="Berkeley Tower">
   
   <h1>Evan H. Wu</h1>
-  <p><strong>Email:</strong> evanwu@berkeley.edu &nbsp;&nbsp;&nbsp; <strong>Phone:</strong> 408-826-9907</p>
+  <p><strong>Email:</strong> <a href="mailto:evanwu@berkeley.edu">evanwu@berkeley.edu</a> &nbsp;&nbsp;&nbsp; </p>
+  <p><strong>Phone:</strong> 408-826-9907</p>
 
   <section>
     <h2>Education</h2>
@@ -125,17 +126,17 @@
   <script>
   $(document).ready(function() {
     const githubUser = 'drexler-sky'; // Replace with your actual GitHub username
+    const sparkDescription = "Apache Spark - A unified analytics engine for large-scale data processing"; // Predefined description for Spark
+    const icebergDescription = "Apache Iceberg - An open source table format for large scale analytic datasets, designed to improve data lake reliability and performance."; // Predefined description for Iceberg
     $.ajax({
         url: `https://api.github.com/users/${githubUser}/repos?type=owner&sort=updated`,
         dataType: 'json',
         success: function(repos) {
             repos.forEach(repo => {
-                if (repo.name.toLowerCase().includes('spark') ||
-                    (repo.description && repo.description.toLowerCase().includes('spark'))) {
-                    $('#spark-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>`);
-                } else if (repo.name.toLowerCase().includes('iceberg') ||
-                    (repo.description && repo.description.toLowerCase().includes('iceberg'))) {
-                    $('#iceberg-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${repo.description || 'No description available'}</li>`);
+                if (repo.name.toLowerCase().includes('spark')) {
+                    $('#spark-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${sparkDescription}</li>`);
+                } else if (repo.name.toLowerCase().includes('iceberg')) {
+                    $('#iceberg-projects').append(`<li><a href="${repo.html_url}" target="_blank">${repo.name}</a> - ${icebergDescription}</li>`);
                 }
             });
         },
@@ -146,6 +147,7 @@
     });
   });
   </script>
+
 </body>
 </html>
 
